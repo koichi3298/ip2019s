@@ -9,7 +9,7 @@ function readFiles(files) {
       output.push('<li><strong>', escape(f.name),'<strong>(', f.type || 'n/a',') - ',
                   f.size, 'bytes, last motified : ',
                   f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-                  '</li>';
+                  '</li>');
     }
     document.getElementById('list').innerHTML = '<ul>' + output.join('')+ '</ul>';
 
@@ -26,7 +26,7 @@ function readFiles(files) {
         var span = document.createElement('span');
         span.setAttribute("class","svgshow");
         span.innerHTML = evt.target.result;
-        document.getElementById('svgimage').insertBefore(span.null);
+        document.getElementById('svgimage').insertBefore(span,null);
 
         var span = document.createElement('span');
         span.setAttribute('class','svgtext')
